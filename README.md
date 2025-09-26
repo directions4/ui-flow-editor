@@ -2,6 +2,8 @@
 
 A Visual Studio Code extension for creating interactive UI flow diagrams.
 
+![screen shot](images/screen-shot-01.png)
+
 ## Features
 
 * Interactive Preview: Mermaid.js-powered class diagrams with zoom and pan functionality
@@ -42,6 +44,8 @@ Action element 2
 ==> Target Screen 2
 ```
 
+![basic block](images/basic-block.png)
+
 ### Hierarchical Display Elements
 
 Use Markdown list syntax to create hierarchical structures:
@@ -61,6 +65,8 @@ Use Markdown list syntax to create hierarchical structures:
 Product Click
 ==> Product Detail Screen
 ```
+
+![hierarchical](images/hierarchical.png)
 
 ### Separators
 
@@ -84,6 +90,8 @@ Next content
 --
 Another action
 ```
+
+![auto connect](images/auto-connect.png)
 
 ## Example
 
@@ -120,6 +128,8 @@ Already have account?
   - Statistics
   - Recent Activity
 ```
+
+![example](images/example.png)
 
 ## Commands
 

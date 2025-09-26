@@ -12,7 +12,8 @@
   "categories": [
     "Other"
   ],
-  "publisher": "my-publisher-id",
+  "icon": "images/icon.png",
+  "publisher": "directions4",
   "repository": "https://github.com/directions4/ui-flow-editor",
   "homepage": "https://github.com/directions4/ui-flow-editor",
   "bugs": "https://github.com/directions4/ui-flow-editor/issues",

@@ -1,0 +1,111 @@
+name: Test Suite
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [18.x, 20.x]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run linter
+      run: npm run lint
+
+    - name: Compile TypeScript
+      run: npm run compile
+
+    - name: Compile tests
+      run: npm run compile-tests
+
+    - name: Run tests
+      uses: coactions/setup-xvfb@v1
+      with:
+        run: npm test
+        options: -screen 0 1024x768x24
+
+    - name: Run unit tests
+      if: matrix.os == 'ubuntu-latest' && matrix.node-version == '18.x'
+      uses: coactions/setup-xvfb@v1
+      with:
+        run: npm run test:unit
+        options: -screen 0 1024x768x24
+
+    - name: Run integration tests
+      if: matrix.os == 'ubuntu-latest' && matrix.node-version == '18.x'
+      uses: coactions/setup-xvfb@v1
+      with:
+        run: npm run test:integration
+        options: -screen 0 1024x768x24
+
+  build:
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build extension package
+      run: npm run package
+
+    - name: Package extension
+      run: |
+        npm install -g @vscode/vsce
+        vsce package --no-dependencies
+
+    - name: Upload VSIX artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: extension-vsix
+        path: '*.vsix'
+        retention-days: 30
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run security audit
+      run: npm audit --audit-level=high
+
+    - name: Check for outdated dependencies
+      run: npm outdated || true

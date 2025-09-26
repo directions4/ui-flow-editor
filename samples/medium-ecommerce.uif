@@ -1,0 +1,136 @@
+[Home Page]
+- Header
+  - Logo
+  - Search Bar
+  - User Menu
+- Hero Section
+  - Featured Banner
+  - Call to Action
+- Product Grid
+  - Category Cards
+  - Popular Items
+--
+Search Products
+==> Search Results
+Click Product
+==> Product Detail
+Click Sign In
+==> Login Page
+
+[Search Results]
+- Search Bar
+  - Query Input
+  - Filter Button
+- Filters Panel
+  - Category Filter
+  - Price Range
+  - Brand Filter
+- Results Grid
+  - Product Cards
+  - Pagination
+--
+Click Product
+==> Product Detail
+Apply Filter
+Refine Search
+
+[Product Detail]
+- Product Images
+  - Main Image
+  - Thumbnail Gallery
+- Product Info
+  - Title and Price
+  - Description
+  - Reviews
+- Purchase Options
+  - Size Selector
+  - Quantity Input
+  - Add to Cart Button
+--
+Add to Cart
+==> Shopping Cart
+View Reviews
+Continue Shopping
+==> Home Page
+
+[Shopping Cart]
+- Cart Header
+  - Item Count
+  - Continue Shopping Link
+- Cart Items
+  - Product List
+  - Quantity Controls
+  - Remove Options
+- Order Summary
+  - Subtotal
+  - Tax and Shipping
+  - Total Amount
+- Actions
+  - Update Cart Button
+  - Checkout Button
+--
+Proceed to Checkout
+==> Checkout Page
+Continue Shopping
+==> Home Page
+
+[Login Page]
+- Login Form
+  - Email Field
+  - Password Field
+  - Login Button
+- Alternative Options
+  - Create Account Link
+  - Forgot Password
+  - Social Login
+--
+Successful Login
+==> User Dashboard
+Create Account
+==> Registration Page
+
+[Registration Page]
+- Registration Form
+  - Personal Info
+  - Account Details
+  - Terms Checkbox
+- Submit Actions
+  - Create Account Button
+  - Back to Login
+--
+Account Created
+==> User Dashboard
+Back to Login
+==> Login Page
+
+[User Dashboard]
+- Profile Section
+  - User Info
+  - Profile Picture
+- Order History
+  - Recent Orders
+  - Order Status
+- Account Settings
+  - Personal Info
+  - Preferences
+--
+View Order Details
+==> Order Detail
+Edit Profile
+==> Profile Settings
+Logout
+==> Home Page
+
+[Checkout Page]
+- Shipping Information
+  - Address Form
+  - Delivery Options
+- Payment Details
+  - Card Information
+  - Billing Address
+- Order Review
+  - Item Summary
+  - Final Total
+--
+Place Order
+==> Order Confirmation

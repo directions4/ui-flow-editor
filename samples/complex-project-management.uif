@@ -1,0 +1,198 @@
+[Welcome Screen]
+- Header
+  - Company Logo
+  - Navigation Menu
+- Hero Section
+  - Welcome Message
+  - Get Started Button
+- Features Overview
+  - Feature Cards
+  - Testimonials
+--
+Click Get Started
+==> Registration
+Click Sign In
+==> Login
+
+[Registration]
+- Registration Form
+  - Basic Info
+  - Company Details
+  - Plan Selection
+- Terms and Conditions
+  - Checkbox
+  - Legal Links
+--
+Submit Registration
+==> Email Verification
+Already Have Account
+==> Login
+
+[Email Verification]
+- Verification Message
+  - Check Email Notice
+  - Resend Button
+- Instructions
+  - Steps to Follow
+--
+Email Verified
+==> Onboarding
+
+[Login]
+- Login Form
+  - Email Input
+  - Password Input
+  - Remember Me
+- Additional Options
+  - Forgot Password
+  - Sign Up Link
+--
+Successful Login
+==> Dashboard
+Forgot Password
+==> Password Reset
+
+[Password Reset]
+- Reset Form
+  - Email Input
+  - Submit Button
+- Back Options
+  - Return to Login
+--
+Reset Submitted
+==> Login
+
+[Onboarding]
+- Welcome Steps
+  - Progress Indicator
+  - Step Content
+- Configuration
+  - Workspace Setup
+  - Team Invitation
+- Getting Started
+  - Tutorial Options
+--
+Complete Onboarding
+==> Dashboard
+Skip Tutorial
+==> Dashboard
+
+[Dashboard]
+- Top Navigation
+  - Logo
+  - Search Bar
+  - User Menu
+- Sidebar
+  - Project List
+  - Quick Actions
+  - Settings Link
+- Main Content
+  - Recent Projects
+  - Activity Feed
+  - Statistics
+--
+Create New Project
+==> Project Creation
+View Project
+==> Project Overview
+Open Settings
+==> User Settings
+
+[Project Creation]
+- Project Details
+  - Name Input
+  - Description
+  - Template Selection
+- Team Setup
+  - Member Invitation
+  - Role Assignment
+- Initial Configuration
+  - Workflow Setup
+  - Integration Options
+--
+Create Project
+==> Project Overview
+Cancel
+==> Dashboard
+
+[Project Overview]
+- Project Header
+  - Project Name
+  - Status Badge
+  - Action Buttons
+- Navigation Tabs
+  - Tasks
+  - Timeline
+  - Team
+  - Settings
+- Content Area
+  - Task Board
+  - Progress Charts
+--
+View Tasks
+==> Task Board
+View Timeline
+==> Project Timeline
+Manage Team
+==> Team Management
+Project Settings
+==> Project Settings
+
+[Task Board]
+- Board Header
+  - View Options
+  - Filter Controls
+- Task Columns
+  - Todo Column
+  - In Progress
+  - Review
+  - Done
+- Task Cards
+  - Task Details
+  - Assignee Info
+  - Due Dates
+--
+Create Task
+==> Task Creation
+Edit Task
+==> Task Detail
+Change View
+Filter Tasks
+
+[Task Detail]
+- Task Information
+  - Title and Description
+  - Status and Priority
+  - Assignee and Due Date
+- Task Content
+  - Checklist Items
+  - Comments
+  - Attachments
+- Actions
+  - Edit Button
+  - Delete Button
+  - Status Change
+--
+Update Task
+Save Changes
+==> Task Board
+Delete Task
+==> Task Board
+
+[Project Timeline]
+- Timeline Header
+  - Date Range Selector
+  - View Controls
+- Timeline View
+  - Milestone Markers
+  - Task Dependencies
+  - Progress Indicators
+- Side Panel
+  - Upcoming Tasks
+  - Overdue Items
+--
+Adjust Timeline
+View Task Details
+==> Task Detail
+Back to Board
+==> Task Board

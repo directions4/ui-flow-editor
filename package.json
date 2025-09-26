@@ -1,0 +1,120 @@
+{
+  "name": "ui-flow-editor",
+  "displayName": "UI Flow Editor",
+  "description": "Interactive UI Flow diagram editor for VSCode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "author": {
+    "name": "SHIKATA Satoru"
+  },
+  "categories": [
+    "Other"
+  ],
+  "publisher": "my-publisher-id",
+  "repository": "https://github.com/directions4/ui-flow-editor",
+  "homepage": "https://github.com/directions4/ui-flow-editor",
+  "bugs": "https://github.com/directions4/ui-flow-editor/issues",
+  "keywords": ["ui flows", "diagram", "mermaid"],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ui-flow-editor.preview",
+        "title": "Open UI Flow Preview",
+        "category": "UI Flow Editor",
+        "icon": "$(preview)"
+      },
+      {
+        "command": "ui-flow-editor.exportHtml",
+        "title": "Export as HTML",
+        "category": "UI Flow Editor"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "ui-flow-editor.preview",
+          "when": "resourceLangId == ui-flows",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "ui-flow-editor.preview",
+          "when": "resourceLangId == ui-flows",
+          "group": "1_modification"
+        },
+        {
+          "command": "ui-flow-editor.exportHtml",
+          "when": "resourceLangId == ui-flows",
+          "group": "1_modification"
+        }
+      ]
+    },
+    "languages": [
+      {
+        "id": "ui-flows",
+        "aliases": [
+          "UI Flows",
+          "uiflows"
+        ],
+        "extensions": [
+          ".uif"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "ui-flow-editor.preview",
+        "key": "ctrl+shift+v",
+        "mac": "cmd+shift+v",
+        "when": "resourceLangId == ui-flows"
+      },
+      {
+        "command": "ui-flow-editor.exportHtml",
+        "key": "ctrl+shift+s",
+        "mac": "cmd+shift+s",
+        "when": "resourceLangId == ui-flows"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "test:unit": "npm run test -- --grep \"Test Suite\"",
+    "test:integration": "npm run test -- --grep \"Integration Tests\"",
+    "test:coverage": "echo \"Coverage reporting can be added with c8 when needed\"",
+    "test:watch": "npm run compile-tests && vscode-test --watch",
+    "test:verbose": "npm run test -- --reporter spec",
+    "test:all": "npm run test:unit && npm run test:integration",
+    "test:clean": "rimraf out/test && npm run compile-tests"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.104.0",
+    "@typescript-eslint/eslint-plugin": "^8.44.1",
+    "@typescript-eslint/parser": "^8.44.1",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.36.0",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.2",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "mermaid": "^11.12.0"
+  }
+}

@@ -1,0 +1,40 @@
+[Login Screen]
+- Header
+  - App Logo
+  - Welcome Message
+- Form Fields
+  - Email Input
+  - Password Input
+- Actions
+  - Login Button
+  - Forgot Password Link
+--
+Click Login Button
+==> Dashboard
+
+[Dashboard]
+- Navigation
+  - User Avatar
+  - Menu Items
+- Content Area
+  - Welcome Message
+  - Quick Stats
+  - Recent Activity
+--
+Click Logout
+==> Login Screen
+
+[Forgot Password]
+- Header
+  - Back Button
+  - Title
+- Form
+  - Email Input
+  - Reset Button
+- Information
+  - Help Text
+--
+Click Reset Button
+==> Login Screen
+Click Back Button
+==> Login Screen
